@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_ket_qua">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFF"
+        android:layout_height="100dp"
+        android:text="Điểm số 15/20" />
+
+    <Button
+        android:id="@+id/btnLamLai"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Làm lại" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#ff0000"
+        android:background="#eee8aa"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Lần sau cố gắng hơn nhé!" />
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/icon_home" />
+
+</LinearLayout>

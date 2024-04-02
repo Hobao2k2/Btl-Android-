@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff9966"
+    android:orientation="vertical"
+    tools:context=".topic">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#ff0000"
+        android:layout_marginTop="20dp"
+        android:text="Chào mừng bạn đến với chủ đề Toán Học" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/anh_main" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#ff0000"
+        android:layout_marginTop="20dp"
+        android:text="Mời bạn chọn mức độ bài tập" />
+
+    <Button
+        android:id="@+id/btnde"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:text="Dễ" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:text="Trung Bình" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:text="Khó" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnExit"
+            android:layout_width="58dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#ff9966"
+            app:srcCompat="@drawable/icon_quay_lai_trang_truoc" />
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="58dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#ff9966"
+            app:srcCompat="@drawable/icon_home" />
+
+
+    </LinearLayout>
+</LinearLayout>
