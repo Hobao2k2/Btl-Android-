@@ -4,12 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Activity_ket_qua : AppCompatActivity() {
+    private lateinit var txtDiemSo: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,6 +22,10 @@ class Activity_ket_qua : AppCompatActivity() {
             insets
         }
         addEvents()
+        val i=intent
+        val diemso=i.getStringExtra("diemso")
+        txtDiemSo=findViewById<TextView>(R.id.txtDiemSoGuiQua)
+        txtDiemSo.setText("Bạn dành được "+ diemso+" điểm")
     }
     private fun addEvents(){
         xuliLamLai()

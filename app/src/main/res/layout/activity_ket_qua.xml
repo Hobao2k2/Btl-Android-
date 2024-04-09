@@ -9,14 +9,15 @@
     tools:context=".Activity_ket_qua">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtDiemSoGuiQua"
         android:layout_width="300dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:background="#00FFFF"
         android:layout_height="100dp"
-        android:text="Điểm số 15/20" />
+        android:textSize="30dp"
+        android:text="Diem so" />
 
     <Button
         android:id="@+id/btnLamLai"
