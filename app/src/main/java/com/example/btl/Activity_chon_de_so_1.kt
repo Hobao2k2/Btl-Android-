@@ -85,7 +85,7 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
             return
         }
         mquestion=question
-        var titleQuestion: String = "Câu hỏi "+(currentQuestion+1).toString()
+        var titleQuestion: String = "Câu hỏi "+(currentQuestion+1).toString()+"/"+questionList
         txtIndexQuestion.setText(titleQuestion)
         txtcontentQuestion.setText(question.title)
         txtanswer1.setText(question.answers.get(0).content)
