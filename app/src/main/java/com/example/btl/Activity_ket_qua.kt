@@ -23,7 +23,8 @@ class Activity_ket_qua : AppCompatActivity() {
         }
         addEvents()
         val i=intent
-        val diemso=i.getStringExtra("diemso")
+        val diemsoString = i.getStringExtra("diemso")
+        val diemso: Int? = diemsoString?.toIntOrNull()
         txtDiemSo=findViewById<TextView>(R.id.txtDiemSoGuiQua)
         txtDiemSo.setText("Bạn dành được "+ diemso+" điểm")
     }

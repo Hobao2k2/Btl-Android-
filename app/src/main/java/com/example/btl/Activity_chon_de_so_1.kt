@@ -85,7 +85,7 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
             return
         }
         mquestion=question
-        var titleQuestion: String = "Câu hỏi "+(currentQuestion+1).toString()+"/"+questionList
+        var titleQuestion: String = "Câu hỏi "+(currentQuestion+1).toString()+"/"+questionList.size.toString()
         txtIndexQuestion.setText(titleQuestion)
         txtcontentQuestion.setText(question.title)
         txtanswer1.setText(question.answers.get(0).content)
@@ -110,21 +110,25 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.txtAnswer1->{
+                stopCountDown()
                 txtanswer1.setBackgroundResource(R.drawable.bg_orange_corner_30)
                 checkAnswer(txtanswer1,mquestion,mquestion.answers.get(0))
                 return
             }
             R.id.txtAnswer2->{
+                stopCountDown()
                 txtanswer2.setBackgroundResource(R.drawable.bg_orange_corner_30)
                 checkAnswer(txtanswer2,mquestion,mquestion.answers.get(1))
                 return
             }
             R.id.txtAnswer3->{
+                stopCountDown()
                 txtanswer3.setBackgroundResource(R.drawable.bg_orange_corner_30)
                 checkAnswer(txtanswer3,mquestion,mquestion.answers.get(2))
                 return
             }
             R.id.txtAnswer4->{
+                stopCountDown()
                 txtanswer4.setBackgroundResource(R.drawable.bg_orange_corner_30)
                 checkAnswer(txtanswer4,mquestion,mquestion.answers.get(3))
                 return
@@ -183,7 +187,7 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
             countDownTimer?.cancel()
         }
 
-        val timeLeftInMillis: Long = 20000 // 10 giây
+        val timeLeftInMillis: Long = 20000 // 20 giây
 
         countDownTimer = object : CountDownTimer(timeLeftInMillis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -201,9 +205,16 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
 
         isCountDownRunning = true
     }
+
+    private fun stopCountDown() {
+        countDownTimer?.cancel()
+        isCountDownRunning = false
+    }
+
     private fun formatTime(seconds: Long): String {
         val minutes = seconds / 60
         val secs = seconds % 60
         return String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)
     }
+
 }
