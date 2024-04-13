@@ -47,13 +47,16 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
 
 
     private fun getAllQuestions(){
+        val i=intent
+        val examnull = i.getStringExtra("Base_url")
+        val exam: String =examnull?: ""
         val api=Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)
 
-        api.getQuestions().enqueue(object : Callback<List<Question>>{
+        api.getQuestionsByExam(exam).enqueue(object : Callback<List<Question>>{
             override fun onResponse(
                 call: Call<List<Question>>,
                 response: Response<List<Question>>

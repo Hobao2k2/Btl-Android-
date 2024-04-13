@@ -25,7 +25,7 @@ class GetAllQuestions {
             .build()
             .create(ApiService::class.java)
 
-        api.getQuestions().enqueue(object : Callback<List<Question>> {
+        api.getQuestionsByExam("toan-de-2").enqueue(object : Callback<List<Question>> {
             override fun onResponse(
                 call: Call<List<Question>>,
                 response: Response<List<Question>>

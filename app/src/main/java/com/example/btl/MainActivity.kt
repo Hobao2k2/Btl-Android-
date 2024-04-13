@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     private fun addEvents() {
         xulylistview()
         xuliExit()
@@ -48,11 +49,14 @@ class MainActivity : AppCompatActivity() {
         lvmonhoc.adapter=customAdapter
         lvmonhoc.onItemClickListener=AdapterView.OnItemClickListener { parent, view, position, id ->
 
-            if(position==0){
-                val intent=Intent(this,topic::class.java)
-                startActivity(intent)
+            val intent=Intent(this,topic::class.java)
+            when (position) {
+                0 -> intent.putExtra("send", "Toán Học")
+                1 -> intent.putExtra("send", "Khoa Học")
+                2 -> intent.putExtra("send", "Văn Học")
+                3 -> intent.putExtra("send", "Nghệ Thuật")
             }
-            Toast.makeText(this,"ban chon"+list[position].title,Toast.LENGTH_SHORT).show()
+            startActivity(intent)
         }
     }
     private fun xuliExit(){
