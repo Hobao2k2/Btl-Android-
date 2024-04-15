@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class Activity_ket_qua : AppCompatActivity() {
     private lateinit var txtDiemSo: TextView
+    private lateinit var txtResponse: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,9 +25,18 @@ class Activity_ket_qua : AppCompatActivity() {
         addEvents()
         val i=intent
         val diemsoString = i.getStringExtra("diemso")
-        val diemso: Int? = diemsoString?.toIntOrNull()
+        val diemso: String =diemsoString?: ""
+        var diemsoInt=diemso.toInt()
         txtDiemSo=findViewById<TextView>(R.id.txtDiemSoGuiQua)
+        txtResponse=findViewById<TextView>(R.id.txtResponse)
         txtDiemSo.setText("Bạn dành được "+ diemso+" điểm")
+        if(diemsoInt>0&&diemsoInt<=250){
+            txtResponse.setText("Bạn cần cố gắng hơn ở lần sau!")
+        }else if(diemsoInt>200&&diemsoInt<=400){
+            txtResponse.setText("Bạn dành được mức điểm khá!")
+        }else{
+            txtResponse.setText("Bạn dành được mức điểm tốt!")
+        }
     }
     private fun addEvents(){
         xuliLamLai()

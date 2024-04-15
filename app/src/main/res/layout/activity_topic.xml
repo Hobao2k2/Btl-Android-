@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20dp"
-        android:textColor="#ff0000"
+        android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:text="Chào mừng bạn đến với chủ đề" />
 
@@ -31,18 +31,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="#ff0000"
+        android:textSize="25dp"
+        android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:text="Mời bạn chọn mức độ bài tập" />
 
     <Button
         android:id="@+id/btnDe"
         android:layout_width="200dp"
-        android:layout_height="53dp"
+        android:layout_height="65dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:text="Dễ"
+        android:background="@drawable/button_custom"
+        app:backgroundTint="@null"
         android:textSize="30dp" />
 
     <Button
@@ -51,6 +53,8 @@
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:background="@drawable/button_custom"
+        app:backgroundTint="@null"
         android:textSize="30dp"
         android:text="Trung Bình" />
 
@@ -61,6 +65,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="30dp"
+        android:background="@drawable/button_custom"
+        app:backgroundTint="@null"
         android:text="Khó" />
 
     <LinearLayout

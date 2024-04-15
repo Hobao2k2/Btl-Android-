@@ -15,11 +15,13 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:layout_marginTop="25dp"
-        android:textColor="#ff0000"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
         android:text="Chào mừng bạn đến với Toán Học mức độ dễ" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgAvatar"
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
@@ -29,7 +31,7 @@
         android:id="@+id/lvchonDe"
         android:layout_width="match_parent"
         android:layout_height="379dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp" />
     <LinearLayout

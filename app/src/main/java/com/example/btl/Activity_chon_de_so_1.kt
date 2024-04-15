@@ -143,13 +143,15 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
             handler.postDelayed({textView.setBackgroundResource(R.drawable.bg_green_corner_30)}, 1000)
             diemso=diemso+50
             handler.postDelayed({ txtDiemSo.setText("Điểm số: "+(diemso).toString())
+                nextQuestion()
             }, 1000)
-            nextQuestion()
+
         }
         else if(answer.isCorrect=="0"){
             handler.postDelayed({textView.setBackgroundResource(R.drawable.bg_red_corner_30)}, 1000)
-            handler.postDelayed({showAnswerCorrect(question)}, 1000)
-            nextQuestion()
+            handler.postDelayed({showAnswerCorrect(question)
+                nextQuestion()}, 1000)
+
         }
     }
     private fun nextQuestion(){
