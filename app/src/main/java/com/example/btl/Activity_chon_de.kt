@@ -43,7 +43,7 @@ class Activity_chon_de : AppCompatActivity() {
         topic = i.getStringExtra("topic") ?: ""
         if(topic=="Toán Học"){
             imgAvatar.setImageResource(R.drawable.img_toan_hoc)
-        }else if(topic=="Văn Học"){
+        }else if(topic=="Văn Hóa"){
             imgAvatar.setImageResource(R.drawable.img_van_hoc)
         }
         else if(topic=="Khoa Học"){
@@ -73,55 +73,55 @@ class Activity_chon_de : AppCompatActivity() {
         lvchonDe.onItemClickListener=AdapterView.OnItemClickListener { parent, view, position, id ->
             val intent = Intent(this, Activity_chon_de_so_1::class.java)
             when {
-                position == 0 && topic== "Văn Học" && level=="Dễ" -> {
+                position == 0 && topic== "Văn Hóa" && level=="Dễ" -> {
                     intent.putExtra("Base_url", "van-hoc-de-1")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","1")
                 }
-                position == 1 && topic== "Văn Học" && level=="Dễ" -> {
+                position == 1 && topic== "Văn Hóa" && level=="Dễ" -> {
                     intent.putExtra("Base_url", "van-hoc-de-2")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","2")
                 }
-                position == 2 && topic== "Văn Học" && level=="Dễ" -> {
+                position == 2 && topic== "Văn Hóa" && level=="Dễ" -> {
                     intent.putExtra("Base_url", "van-hoc-de-3")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","3")
                 }
-                position == 0 && topic== "Văn Học" && level=="Trung Bình" -> {
+                position == 0 && topic== "Văn Hóa" && level=="Trung Bình" -> {
                     intent.putExtra("Base_url", "van-hoc-trung-binh-1")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","1")
                 }
-                position == 1 && topic== "Văn Học" && level=="Trung Bình" -> {
+                position == 1 && topic== "Văn Hóa" && level=="Trung Bình" -> {
                     intent.putExtra("Base_url", "van-hoc-trung-binh-2")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","2")
                 }
-                position == 2 && topic== "Văn Học" && level=="Trung Bình" -> {
+                position == 2 && topic== "Văn Hóa" && level=="Trung Bình" -> {
                     intent.putExtra("Base_url", "van-hoc-trung-binh-3")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","3")
                 }
-                position == 0 && topic== "Văn Học" && level=="Khó" -> {
+                position == 0 && topic== "Văn Hóa" && level=="Khó" -> {
                     intent.putExtra("Base_url", "van-hoc-kho-1")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","1")
                 }
-                position == 1 && topic== "Văn Học" && level=="Khó" -> {
+                position == 1 && topic== "Văn Hóa" && level=="Khó" -> {
                     intent.putExtra("Base_url", "van-hoc-kho-2")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)
                     intent.putExtra("stt","2")
                 }
-                position == 2 && topic== "Văn Học" && level=="Khó" -> {
+                position == 2 && topic== "Văn Hóa" && level=="Khó" -> {
                     intent.putExtra("Base_url", "van-hoc-kho-3")
                     intent.putExtra("topic",topic)
                     intent.putExtra("level",level)

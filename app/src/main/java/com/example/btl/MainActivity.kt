@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         var list= mutableListOf<OutData>()
         list.add(OutData(R.drawable.icon_toan,"Toán Học"))
         list.add(OutData(R.drawable.icon_khoa_hoc,"Khoa Học"))
-        list.add(OutData(R.drawable.icon_van,"Văn Học"))
+        list.add(OutData(R.drawable.icon_van,"Văn Hóa"))
         list.add(OutData(R.drawable.icon_nghe_thuat,"Nghệ Thuật"))
         customAdapter= CustomAdapter(this,list)
         val lvmonhoc=findViewById<ListView>(R.id.lvmonhoc)
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             when (position) {
                 0 -> intent.putExtra("send", "Toán Học")
                 1 -> intent.putExtra("send", "Khoa Học")
-                2 -> intent.putExtra("send", "Văn Học")
+                2 -> intent.putExtra("send", "Văn Hóa")
                 3 -> intent.putExtra("send", "Nghệ Thuật")
             }
             startActivity(intent)

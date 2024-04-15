@@ -22,6 +22,9 @@ import java.util.Locale
 class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
     var currentQuestion=0
     var diemso=0;
+    lateinit var level: String
+    lateinit var topic: String
+    lateinit var stt: String
     lateinit var mquestion: Question
     private lateinit var txtIndexQuestion: TextView
     private lateinit var txtcontentQuestion: TextView
@@ -31,6 +34,7 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
     private lateinit var txtanswer4: TextView
     private lateinit var txtDiemSo: TextView
     private lateinit var txtTimer: TextView
+    private lateinit var txtTittle: TextView
     private  var questionList: MutableList<Question> = mutableListOf()
     private val BASE_URL="http://10.0.2.2:8081"
     private val TAG="Check_response"
@@ -43,6 +47,15 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
         init()
         getAllQuestions()
         startCountDown()
+        xuliTittle()
+    }
+
+    private fun xuliTittle() {
+        val i=intent
+        level = i.getStringExtra("level") ?: ""
+        topic = i.getStringExtra("topic") ?: ""
+        stt = i.getStringExtra("stt") ?: ""
+        txtTittle.setText("Bạn đang làm bài chủ đề "+ topic +" mức độ "+level+" đề số "+stt)
     }
 
 
@@ -109,6 +122,7 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
         txtanswer4=findViewById<TextView>(R.id.txtAnswer4)
         txtTimer=findViewById<TextView>(R.id.txtTimer)
         txtDiemSo=findViewById<TextView>(R.id.txtDiemSo)
+        txtTittle=findViewById<TextView>(R.id.txtTittle)
     }
     override fun onClick(v: View?) {
         when(v?.id){
