@@ -9,6 +9,18 @@
     tools:context=".Activity_ket_qua">
 
     <TextView
+        android:id="@+id/txtChuDeDangLam"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient_background"
+        android:gravity="center"
+        android:text="Chủ đề     "
+        android:textColor="#ff0000" />
+
+    <TextView
         android:id="@+id/txtDiemSoGuiQua"
         android:layout_width="300dp"
         android:layout_gravity="center"
@@ -30,7 +42,7 @@
         android:background="#eee8aa"
         android:textSize="20dp"
         android:layout_marginTop="20dp"
-        android:text="Lần sau cố gắng hơn nhé!" />
+        android:text="" />
 
     <ImageButton
         android:id="@+id/btnHome"
@@ -41,5 +53,6 @@
         android:layout_marginTop="120dp"
         android:layout_gravity="center"
         app:srcCompat="@drawable/icon_home" />
+
 
 </LinearLayout>

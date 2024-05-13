@@ -20,6 +20,10 @@ class Activity_ket_qua : AppCompatActivity() {
     private lateinit var txtDiemSo: TextView
     private lateinit var txtResponse: TextView
     private lateinit var retrofitManager: RetrofitManager
+    private lateinit var txtTittle: TextView
+    lateinit var level: String
+    lateinit var topic: String
+    lateinit var stt: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,7 +48,12 @@ class Activity_ket_qua : AppCompatActivity() {
         }else{
             txtResponse.setText("Bạn dành được mức điểm tốt!")
         }
-        addUser()
+        txtTittle=findViewById(R.id.txtChuDeDangLam)
+        level = i.getStringExtra("level") ?: ""
+        topic = i.getStringExtra("topic") ?: ""
+        stt = i.getStringExtra("stt") ?: ""
+        txtTittle.setText("Kết quả bài làm chủ đề "+ topic +" mức độ "+level+" đề số "+stt)
+//        addUser()
     }
 
     private fun addUser() {

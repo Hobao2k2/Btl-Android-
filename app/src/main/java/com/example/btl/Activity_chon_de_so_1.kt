@@ -172,6 +172,9 @@ class Activity_chon_de_so_1 : AppCompatActivity(),View.OnClickListener {
         if(currentQuestion==questionList.size-1){
             val intent=Intent(this,Activity_ket_qua::class.java)
             intent.putExtra("diemso",diemso.toString())
+            intent.putExtra("topic",topic)
+            intent.putExtra("level",level)
+            intent.putExtra("stt",stt)
             startActivity(intent)
         }else{
             currentQuestion++;
